@@ -1,14 +1,14 @@
-﻿namespace StockExchange.Task2
+﻿using System;
+
+namespace StockExchange.Task2
 {
     public class StockPlayersFactory
     {
         public Players CreatePlayers()
         {
-            return new Players
-            {
-                RedSocks = new RedSocks(),
-                Blossomers = new Blossomers()
-            };
+            var mediator = new StockMediator();
+
+            return new Players(new RedSocks(mediator, Guid.NewGuid()), new Blossomers(mediator, Guid.NewGuid()));
         }
     }
 }

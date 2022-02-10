@@ -2,9 +2,9 @@
 
 namespace StockExchange.Task2
 {
-    public class RedSocks : BaseStockPlayer
+    public class RossStones : BaseStockPlayer
     {
-        public RedSocks(IStockMediator mediator, Guid id)
+        public RossStones(IStockMediator mediator, Guid id)
             : base(mediator, id)
         {
         }
