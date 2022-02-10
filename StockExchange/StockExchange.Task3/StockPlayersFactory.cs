@@ -4,11 +4,9 @@
     {
         public Players CreatePlayers()
         {
-            return new Players
-            {
-                RedSocks = new RedSocks(),
-                Blossomers = new Blossomers()
-            };
+            var mediator = new StockMediator();
+
+            return new Players(new RedSocks(mediator), new Blossomers(mediator));
         }
     }
 }
