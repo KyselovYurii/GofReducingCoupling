@@ -1,25 +1,10 @@
-﻿using System;
-
-namespace StockExchange.Task3
+﻿namespace StockExchange.Task3
 {
-    public class Blossomers
+    public class Blossomers : BaseStockPlayer
     {
-        public int SoldShares { get; }
-
-        public int BoughtShares { get; }
-
-        public Blossomers() 
-        { 
-        }
-
-        public bool SellOffer(string stockName, int numberOfShares)
+        public Blossomers(IStockMediator mediator)
+            : base(mediator)
         {
-            throw new NotImplementedException();
-        }
-
-        public bool BuyOffer(string stockName, int numberOfShares)
-        {
-            throw new NotImplementedException();
         }
     }
 }
