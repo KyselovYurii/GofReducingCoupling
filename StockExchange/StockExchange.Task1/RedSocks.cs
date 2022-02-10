@@ -2,20 +2,23 @@
 
 namespace StockExchange.Task1
 {
-    public class RedSocks
+    public class RedSocks : IStockPlayer
     {
-        public RedSocks()
+        private readonly IStockMediator _mediator;
+
+        public RedSocks(IStockMediator mediator)
         {
+            _mediator = mediator;
         }
 
         public bool SellOffer(string stockName, int numberOfShares)
         {
-            throw new NotImplementedException();
+            return _mediator.TryMakeDeal(this, DealType.Sell, stockName, numberOfShares);
         }
 
         public bool BuyOffer(string stockName, int numberOfShares)
         {
-            throw new NotImplementedException();
+            return _mediator.TryMakeDeal(this, DealType.Buy, stockName, numberOfShares);
         }
     }
 }
