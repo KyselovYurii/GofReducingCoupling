@@ -4,10 +4,12 @@
     {
         public Players CreatePlayers()
         {
+            var medaitor = new StockMediator();
+
             return new Players
             {
-                RedSocks = new RedSocks(),
-                Blossomers = new Blossomers()
+                RedSocks = new RedSocks(medaitor),
+                Blossomers = new Blossomers(medaitor)
             };
         }
     }
