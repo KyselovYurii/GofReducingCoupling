@@ -1,25 +1,10 @@
-﻿using System;
-
-namespace StockExchange.Task4
+﻿namespace StockExchange.Task4
 {
-    public class RedSocks
+    public class RedSocks : BaseStockPlayer
     {
-        public int SoldShares { get; }
-
-        public int BoughtShares { get; }
-
-        public RedSocks()
+        public RedSocks(IStockMediator mediator)
+            : base(mediator)
         {
-        }
-
-        public bool SellOffer(string stockName, int numberOfShares)
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool BuyOffer(string stockName, int numberOfShares)
-        {
-            throw new NotImplementedException();
         }
     }
 }
